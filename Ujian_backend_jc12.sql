@@ -32,7 +32,7 @@ CREATE TABLE `inventory` (
   KEY `store id_idx` (`store_id`),
   CONSTRAINT `product id` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `store id` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `inventory` (
 
 LOCK TABLES `inventory` WRITE;
 /*!40000 ALTER TABLE `inventory` DISABLE KEYS */;
-INSERT INTO `inventory` VALUES (1,8,1,50),(2,8,3,50),(3,8,4,50),(4,10,1,50),(5,10,3,50),(7,10,4,25),(8,10,99,25);
+INSERT INTO `inventory` VALUES (1,8,1,50),(2,8,3,50),(3,8,4,50),(4,10,1,50),(5,10,3,50),(7,10,4,25),(8,10,99,25),(11,11,3,10);
 /*!40000 ALTER TABLE `inventory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,7 +58,7 @@ CREATE TABLE `product` (
   `harga` int NOT NULL,
   `imagePath` varchar(100) NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (8,'Baju',150000,'/photo/PRD1588230538025.jpg'),(10,'Celana',500000,'/photo/PRD1588234826640.jpg');
+INSERT INTO `product` VALUES (8,'Baju',150000,'/photo/PRD1588230538025.jpg'),(10,'Celana',500000,'/photo/PRD1588234826640.jpg'),(11,'Sepatu',400000,'/photo/PRD1588239898795.jpg');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,7 +82,7 @@ CREATE TABLE `store` (
   `store_id` int NOT NULL AUTO_INCREMENT,
   `branch_name` varchar(45) NOT NULL,
   PRIMARY KEY (`store_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-30 17:25:34
+-- Dump completed on 2020-04-30 17:55:15
