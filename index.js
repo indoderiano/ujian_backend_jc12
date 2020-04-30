@@ -18,8 +18,7 @@ app.get('/',(req,res)=>{
 })
 
 
-const {UserRouters,ProductRouters,StoreRouters,InventoryRouters}=require('./routers')
-app.use('/users',UserRouters)
+const {ProductRouters,StoreRouters,InventoryRouters}=require('./routers')
 app.use('/products',ProductRouters)
 app.use('/stores',StoreRouters)
 app.use('/inventories',InventoryRouters)
